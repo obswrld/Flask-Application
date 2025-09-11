@@ -10,20 +10,31 @@
 
  <div class="content">
         <h1>ToDO List 4.5</h1>
+
+        {% if tasks | length < 1 %}
+        <h3>There are no tasks here... Create on here</h3>
+        {% else %}
         <table>
             <tr>
                 <th>Task</th>
                 <th>Added</th>
                 <th>Actions</th>
             </tr>
+            {% for task in tasks %}
             <tr>
-                <td>Content</td>
-                <td>Data</td>
-                <td>More</td>
+                <td>{{task.context}}</td>
+                <td>{{task.created_at.strftime("%y-%m-%d")}}</td>
+                <td>
+                    <a href="/delete/{{task.id}}">Delete</a>
+                    <br/>
+                    <a href="/edit/{{task.id}}">Edit</a>
+                </td>
             </tr>
+            {% endfor %}
         </table>
-        <form action="">
-            <input type="text" name="content" id="content" />
+        {% endif %}
+        <form action="/" method="POST">
+            <input type="text" name="context" id="context" />
             <input type="submit" value="Add Task" id="btn-add" />
         </form>
     </div>
