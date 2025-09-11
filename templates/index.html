@@ -1,15 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
-    <title>My App</title>
-</head>
-<body>
-    <h1>Welcome To My Application</h1>
-    <p>Names of Java source files that you want to document, separated by spaces,
-        for example Class.java Object.java Button.java. By default, javadoc looks for the specified classes in the current directory.
-        However, you can specify the full path to the class file and use wildcard characters,
-        for example /home/src/java/awt/Graphics*.java. You can also specify the path relative to the current directory.</p>
-</body>
-</html>
+{% extends "base.html" %}
+
+{% block head %}
+
+<title>ToDo List</title>
+
+{% endblock %}
+
+{% block body%}
+
+ <div class="content">
+        <h1>ToDO List 4.5</h1>
+        <table>
+            <tr>
+                <th>Task</th>
+                <th>Added</th>
+                <th>Actions</th>
+            </tr>
+            <tr>
+                <td>Content</td>
+                <td>Data</td>
+                <td>More</td>
+            </tr>
+        </table>
+        <form action="">
+            <input type="text" name="content" id="content" />
+            <input type="submit" value="Add Task" id="btn-add" />
+        </form>
+    </div>
+
+{% endblock %}
