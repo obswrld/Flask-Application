@@ -59,7 +59,7 @@ def edit(id:int):
         except Exception as e:
             return f"Error: {e}"
     else:
-        return "HOME"
+        return render_template("edit.html", task=task)
 
 
 
