@@ -3,7 +3,7 @@ from _datetime import datetime
 from flask import Flask, render_template, redirect, request
 from flask_scss import Scss
 from flask_sqlalchemy import SQLAlchemy
-from typing_extensions import type_repr
+# from typing_extensions import type_repr
 
 app = Flask(__name__)
 Scss(app)

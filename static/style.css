@@ -1,3 +1,63 @@
 body {
+    font-family: "Franklin Gothic Medium", sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: wheat;
+
+}
+.content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, -0, -0, -0.1);
+    text-align: center;
+}
+.content h1 {
+    color: darkgray;
+}
+.content h4 {
+    color: darkgray;
+}
+.content table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.content .table th, td {
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+.content .table .th .td th {
+    background-color: #444444;
+    color: #86989B;
+}
+a {
+    display: inline-block;
+    padding: 8px 16px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: #86989B;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+a:hover {
+    background-color: #177199;
+}
+input {
+    padding: 10px;
+    margin: 5px;
+    border: solid 3px;
+    border-radius: 5px;
+}
+#btn-add {
+    background-color: #177199;
+    color: #ffffff;
+    cursor: pointer;
+}
+#btn-add:hover {
+    background-color: #A5D6D9;
 }
